@@ -1,4 +1,10 @@
 # oxy
+`oxy` is a rapid prototyping kit made with vue and airtable for a flexible, fast database.
+Solves:
+- [] routing
+- [] authentication
+- [] registering users
+- [] basic user account
 
 ## Project setup
 ```
@@ -14,16 +20,3 @@ yarn run serve
 ```
 yarn run build
 ```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
