@@ -1,10 +1,10 @@
 # oxy
 `oxy` is a rapid prototyping kit made with vue and airtable for a flexible, fast database.
 Solves:
-- [] routing
-- [] authentication
-- [] registering users
-- [] basic user account
+- [ ] routing
+- [ ] authentication
+- [x] registering users
+- [ ] basic user account
 
 ## Project setup
 ```
