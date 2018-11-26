@@ -1,9 +1,11 @@
 # oxygen
 `oxygen` is a rapid prototyping kit made with vue and airtable for a flexible, fast database.
 Solves:
-- [ ] routing
-- [ ] authentication
+- [x] routing
 - [x] registering users
+- [ ] hash passwords
+- [ ] image upload
+- [ ] authentication
 - [ ] basic user account
 
 ## Project setup
