@@ -1,5 +1,5 @@
-# oxy
-`oxy` is a rapid prototyping kit made with vue and airtable for a flexible, fast database.
+# oxygen
+`oxygen` is a rapid prototyping kit made with vue and airtable for a flexible, fast database.
 Solves:
 - [ ] routing
 - [ ] authentication
