@@ -31,6 +31,7 @@
 
 <script>
 import Airtable from "airtable";
+import router from '../router'
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
   apiKey: process.env.VUE_APP_AT_API_KEY
@@ -47,7 +48,6 @@ export default {
         firstName: "",
         lastName: "",
         email: "",
-        image: "",
         password: "",
         confirmPassword: ""
       }
@@ -72,9 +72,14 @@ export default {
     formError: function(user) {
       let errors = [];
       for (var key in user) {
-        user[key] == '' ? errors.push(key) : '';
+        user[key] == '' ? errors.push(` ${key}`) : '';
       }
-      alert(String(errors));
+      alert(String(`Please fill in the following field[s]: ${errors}`));
+    },
+    redirect: function(id) {
+      console.log(id);
+      const userId = id;
+      router.push({ name: 'user', params: { userId }})
     },
     createUser: function(data) {
       if (this.checkPassword(data.password, data.confirmPassword)) {
@@ -84,11 +89,12 @@ export default {
           lastName: data.lastName,
           image: [
             {
-              url: "https://dl.airtable.com/hyJetILvQ22MlnH5PsYN_luke.jpg"
+              url: `https://api.adorable.io/avatars/254/${data.email}.png`
             }
           ],
           password: data.password
         },
+        this.redirect(data.email),
         function(err, record) {
           if (err) {
             console.error(err);
